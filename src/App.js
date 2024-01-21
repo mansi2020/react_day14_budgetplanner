@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
+import Budget from "./Component/Budget/Budget";
+import ExpenseList from "./Component/ExpenseList/ExpenseList";
+import AddExpense from "./Component/AddExpense/AddExpense";
+import { UserContext } from "./Context/Context";
 
 function App() {
+  // state to hold data
+  const [data, setData] = useState([]);
+
+  let initialData = JSON.parse(localStorage.getItem("myData")) || [];
+
+  // usercontext value
+  const contextVal = {
+    getData: () => initialData,
+    setData: (newData) => {
+      localStorage.setItem("myData", JSON.stringify(newData));
+      setData(newData);
+    },
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App-container">
+        <UserContext.Provider value={contextVal}>
+          <h1>My Budget Planner</h1>
+          <Budget />
+          <ExpenseList />
+          <AddExpense />
+        </UserContext.Provider>
+      </div>
     </div>
   );
 }

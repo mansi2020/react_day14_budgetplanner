@@ -1,0 +1,16 @@
+.expenselist-lists{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.expenlist-list{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:20px;
+    background-color: gainsboro;
+}
+.expenlist-rupee{
+    display:flex;
+    align-items: center;
+}
