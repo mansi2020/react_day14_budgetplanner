@@ -1,16 +1,42 @@
-.expenselist-lists{
-    display: flex;
-    flex-direction: column;
-    gap:20px;
+.expenselist-container {
+  margin-top: 20px;
 }
-.expenlist-list{
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    padding:20px;
-    background-color: gainsboro;
+
+.expenselist-lists {
+  margin-top: 10px;
 }
-.expenlist-rupee{
-    display:flex;
-    align-items: center;
+
+.expenlist-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.expenselist-container>p{
+    font-size:30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.expenselist-container>h3{
+    margin-bottom: 2rem;
+    color:rgb(76,175,80);
+}
+
+.expenlist-rupee {
+  display: flex;
+  align-items: center;
+}
+
+.expenlist-rupee button {
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: #ff5454;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
 }

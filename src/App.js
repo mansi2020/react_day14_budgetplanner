@@ -20,14 +20,16 @@ function App() {
     },
   };
   return (
-    <div className="App">
-      <div className="App-container">
-        <UserContext.Provider value={contextVal}>
-          <h1>My Budget Planner</h1>
-          <Budget />
-          <ExpenseList />
-          <AddExpense />
-        </UserContext.Provider>
+    <div>
+      <h1 className="heading">My Budget Planner</h1>
+      <div className="App">
+        <div className="App-container">
+          <UserContext.Provider value={contextVal}>
+            <Budget />
+            <ExpenseList />
+            <AddExpense />
+          </UserContext.Provider>
+        </div>
       </div>
     </div>
   );

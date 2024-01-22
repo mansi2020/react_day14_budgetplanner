@@ -1,0 +1,17 @@
+/* budget style */
+.budget-container {
+    display:flex;
+    justify-content: space-between;
+}
+.rupee-btn{
+    background-color: rgb(183, 183, 246);
+    color:black;
+    font-weight: 600;
+    font-size: 1rem;
+    
+}
+.budget-container>div{
+    font-weight: 600;
+    font-size: 1.4rem;
+    color:rgb(76,175,80);
+}

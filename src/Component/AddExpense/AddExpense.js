@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useContext } from "react";
 import { UserContext } from "../../Context/Context";
+import './AddExpense.css'
 
 const AddExpense = () => {
   // ----------------usecontext data-------------------
@@ -23,7 +24,7 @@ const AddExpense = () => {
   }
 
   return (
-    <div>
+    <div className="addexpense-container">
       <h2>Add Expenses</h2>
       <div className="add-expenses">
         <div className="add-expense">
